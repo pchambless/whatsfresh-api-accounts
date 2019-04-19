@@ -1,0 +1,131 @@
+FORMAT: 1A
+HOST: http://api.whatsfresh.app
+
+# WhatsFresh
+
+WhatsFresh is an API facilitating the Tracking of Ingredients into Products for small Consumer Packeged Goods makers.  It is an Account-based system.  In order to access or update data a subscription to an account must be authenticated.
+
+# Group Authentication
+
+# Group Company
+
+## Brands [/brands]
+
+Resource related to the Brands (associated to Ingredient Batches) of an account.
+
+## Vendors [/vendors]
+
+Resource related to the Vendors (associated to Ingredient Batches) used by an account.
+
+## Workers [/workers]
+
+Resource related to the Workers (a.k.a. Team Members) associated to an account.  These people perform tasks and may or may not be registered users of the WhatsFresh App.
+
+## Users [/users]
+
+Resource related to the Users associated to an account.  These people are registered users of the WhatsFresh App.
+
+# Group Ingredients
+
+Ingredients-related data.
+
+## Ingredient Types [/ingredientTypes/{?id}]
+
+Resource related to the ingredient types of an account.  It has the following attributes:
+
+- name
+- description
+
++ Parameters
+    + id (optional, number) - Non-Intelligent ID.
+    + account_id (required, number) - foreign key to associated account.
+
+### List all Ingredient Types [GET]
+
++ Request (application/json)
+
+    + Header
+
+            Accept: application/json
+            
++ Response 201 (application/json)
+
+    + Header
+
+            Location: /ingredientTypes/1
+
+### Retrieve an Ingredient Type [GET]
+
++ Request (application/json)
+
+    + Header
+
+            Accept: application/json
+            
++ Response 201 (application/json)
+
+    + Header
+
+            Location: /ingredientTypes/{id}
+            
+### Create a New Ingredient Type [POST]
+
++ Request (application/json)
+
+    + Header
+
+            Accept: application/json
+            
++ Response 201 (application/json)
+
+    + Header
+
+            Location: /ingredientTypes/
+            
+### Update an Existing Ingredient Type [PUT]
+
++ Request (application/json)
+
+    + Header
+
+            Accept: application/json
+            
++ Response 201 (application/json)
+
+    + Header
+
+            Location: /ingredientTypes/{id}
+            
+### Delete an Ingredient Type [DELETE]
+
+## Ingredients [/ingredients]
+
+The account-specific list of ingredients that go into making products in a given Ingredient Type.
+
+### List all Ingredients [GET]
+### Retrieve an Ingredient [GET]
+### Create a New Ingredient [POST]
+### Update an Existing Ingredient [PUT]
+### Delete an Ingredient [DELETE]
+
+## Ingredient Batches [/ingredientbatches]
+
+# Group Products
+
+Product-related data.
+
+## Product Types Collection [/productTypes]
+
+Account-specific list of Product Types.
+
+## Product Type Tasks Collection [/productTypesTasks]
+
+Client-defined list of tasks to be tracked when processing any products in a given Product Type.
+
+## Products Collection [/products]
+
+Products produced by the account and assigned to specified Product Type.
+
+# Group Admin
+
+## Accounts Collection [/accounts]
