@@ -1,0 +1,31 @@
+repo_name: pchambless/whatsfresh-api-accounts
+report_id: 85860b5265f689fc2af20f11ddefd728
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-02T14:24:25+00:00'
+requested_by: pchambless
+provider: github
+branch: master
+detected_tools_count: 2
+tools:
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/pchambless/whatsfresh-api-accounts
+  detection_source: Repo Metadata
+- name: API Blueprint
+  description: A powerful high-level API design language for web APIs
+  website_url: https://apiblueprint.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Application Utilities
+  sub_category: API Tools
+  image_url: https://img.stackshare.io/service/5627/Q84Qf_4w.png
+  detection_source_url: https://github.com/pchambless/whatsfresh-api-accounts
+  detection_source: Repo Metadata
